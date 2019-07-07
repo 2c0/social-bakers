@@ -7,6 +7,7 @@
 
 
   hoverGrey: #e4e5e6;
+  dividingBorders: #d7d8d8;
 
 
 */
@@ -22,18 +23,36 @@
 .sidebar-content-wrap .sidebar-content-left-panel {
   display: flex;
   flex-direction: column;
-  flex-basis: 30%;
+  flex-basis: 25%;
+  padding: 30px;
+  border-right: 1px solid #d7d8d8;
+}
+
+.sidebar-content-wrap .sidebar-content-left-panel ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-content-wrap .sidebar-content-left-panel ul:last-of-type {
+  border-top: 1px solid #d7d8d8;
 }
 
 .sidebar-content-wrap .sidebar-content-left-panel li {
   list-style: none;
-  margin-bottom: 30px;
+  padding: 20px;
+  cursor: pointer;
 }
 
 .sidebar-content-wrap .sidebar-content-left-panel a {
   text-decoration: none;
   color: #303743;
 }
+
+.sidebar-content-wrap .sidebar-content-left-panel li:hover {
+  background-color: #e4e5e6;
+  font-weight: bold
+}
+
 
 .sidebar-content-wrap .sidebar-content-right-panel {
   display: flex;
@@ -43,4 +62,24 @@
 
 .sidebar-content-wrap .sidebar-content-right-panel .top {
   background: white;
+}
+
+.closing-btn {
+  background: #4a4f59;
+  width: 30px;
+  height: 30px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: -30px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.closing-btn img {
+  width: 15px;
+  height: 15px;
 }
