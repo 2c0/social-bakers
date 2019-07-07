@@ -15,8 +15,8 @@ class App extends React.Component {
     this.setState({ sidebarOpen: open });
   }
 
-  sideBarContent = () => {
-    return <div>test</div>
+  onSetSideBarClose() {
+    this.setState({ sidebarOpen: false });
   }
 
 
@@ -24,12 +24,15 @@ class App extends React.Component {
 
     return (
       <Sidebar
-        sidebar={<SideBarContent />}
+        sidebar={<SideBarContent 
+                    onClose={()=> this.onSetSideBarClose()} 
+                    isOpen={this.state.sidebarOpen}
+                    />}
         open={this.state.sidebarOpen}
         onSetOpen={this.onSetSidebarOpen}
         styles={
-          { root: { background: "#737880" },
-            sidebar: {background: "#f9f9fa"}
+          { root: { background: "#e4e5e6" },
+            sidebar: {background: "#f9f9fa", overflow: "initial"}
            }
         }
         pullRight
