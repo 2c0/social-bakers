@@ -1,0 +1,28 @@
+.main-section-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.main-section-wrap p {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: darkturquoise;
+}
+
+.main-btn {
+  border-radius: 15px;
+  width: 250px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.main-btn:hover {
+  background: #4a4f59;
+  color: white;
+}

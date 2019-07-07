@@ -2,6 +2,8 @@ import React from "react";
 import Sidebar from "react-sidebar";
 import SideBarContent from "../components/SideBarContent";
 
+import  './App.css';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,24 +24,30 @@ class App extends React.Component {
 
   render() {
 
+    const sideBarStyles = {
+      root: { background: "#e4e5e6" },
+      sidebar: { background: "#f9f9fa", overflow: "initial" }
+
+    }
+
     return (
       <Sidebar
-        sidebar={<SideBarContent 
-                    onClose={()=> this.onSetSideBarClose()} 
-                    isOpen={this.state.sidebarOpen}
-                    />}
+        sidebar={<SideBarContent
+          onClose={() => this.onSetSideBarClose()}
+          isOpen={this.state.sidebarOpen}
+        />}
         open={this.state.sidebarOpen}
         onSetOpen={this.onSetSidebarOpen}
-        styles={
-          { root: { background: "#e4e5e6" },
-            sidebar: {background: "#f9f9fa", overflow: "initial"}
-           }
-        }
+        styles={sideBarStyles}
         pullRight
       >
-        <button onClick={() => this.onSetSidebarOpen(true)}>
-          Open sidebar
-        </button>
+        <div className="main-section-wrap">
+          <p>CLICK ME :-)</p>
+            <button className="main-btn" onClick={() => this.onSetSidebarOpen(true)}>
+              Open
+          </button>
+        </div>
+
       </Sidebar >
     );
   }
